@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class AlumnoService {
 
-    //lEsta URL obtiene el listado de todos los empleados en el backend 
+    //lEsta URL obtiene el listado de todos los alumnos en el backend 
     private baseURL = "http://localhost:8080/api/v1/alumnos";
     
     constructor(private httpClient : HttpClient)  {}
@@ -21,4 +21,17 @@ export class AlumnoService {
       return this.httpClient.post((`${this.baseURL}`), alumno);
     }
 
-}
+    updateAlumno(id:number, alumno:Alumno): Observable<Object>{
+      return this.httpClient.put(`${this.baseURL}/${id}`, alumno);
+    }
+  
+    getAlumnoById(id:number):Observable<Alumno>{
+      return this.httpClient.get<Alumno>(`${this.baseURL}/${id}`);
+    }
+
+    deleteAlumno(id:number): Observable<Object>{
+      return this.httpClient.delete(`${this.baseURL}/${id}`);
+    }
+    
+
+  }

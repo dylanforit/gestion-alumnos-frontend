@@ -14,7 +14,8 @@
             <th>{{alumno.email}}</th>
             <td>
                 <button (click)="updateAlumno(alumno.id)" class="btn btn-info">Modificar</button>
-                <button (click)="EliminarAlumno(alumno.id)" class="btn btn-info" style="margin-left:10px ;">Eliminnar</button>
+                <button (click)="deleteAlumno(alumno.id)" class="btn btn-danger" style="margin-left:10px ;">Eliminar</button>
+                <button (click)="detailAlumno(alumno.id)" class="btn btn-primary" style="margin-left:10px ;">Ver</button>
             </td>
         </tr>
     </tbody>

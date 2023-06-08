@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateAlumnoComponent } from './create-alumno/create-alumno.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateAlumnoComponent } from './update-alumno/update-alumno.component';
+import { DetailAlumnoComponent } from './detail-alumno/detail-alumno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListAlumnosComponent,
     CreateAlumnoComponent,
-    UpdateAlumnoComponent
+    UpdateAlumnoComponent,
+    DetailAlumnoComponent
   ],
   imports: [
     BrowserModule,
