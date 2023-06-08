@@ -1,0 +1,21 @@
+<h2>Lista alumnos</h2>
+<table class=" table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let alumno of alumnos">
+            <th>{{alumno.nombre}}</th>
+            <th>{{alumno.apellido}}</th>
+            <th>{{alumno.email}}</th>
+            <td>
+                <button (click)="updateAlumno(alumno.id)" class="btn btn-info">Modificar</button>
+                <button (click)="EliminarAlumno(alumno.id)" class="btn btn-info" style="margin-left:10px ;">Eliminnar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
